@@ -709,11 +709,11 @@ img {
       .testimonial .containerish .section-info p {
         margin: 0; }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .icon {
     padding: 40px 0; } }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .icon {
     padding: 60px 0; } }
 
@@ -766,9 +766,55 @@ img {
   .icon .section-footer p {
     max-width: 690px;
     margin: 0 auto; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 992px) {
     .icon .section-footer {
       padding: 60px 40px 0 40px; } }
+
+.river {
+  height: 60vh;
+  background: url("../../images/parallax-river@2x.jpg") center center/cover;
+  background-attachment: fixed; }
+  @media screen and (min-width: 768px) {
+    .river {
+      max-height: 304px; } }
+  @media screen and (min-width: 2000px) {
+    .river {
+      max-height: 604px; } }
+
+.iv-hormone {
+  background: url("../../images/ivhrt-bg@2x.jpg") center center/cover; }
+  .iv-hormone .containerish {
+    padding: 40px;
+    display: grid;
+    -webkit-box-align: end;
+            align-items: flex-end;
+    grid-gap: 2rem; }
+    @media screen and (min-width: 992px) {
+      .iv-hormone .containerish {
+        padding: 40px 0; } }
+    @media screen and (min-width: 1200px) {
+      .iv-hormone .containerish {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3rem;
+        padding: 80px 0; } }
+    @media screen and (min-width: 1200px) {
+      .iv-hormone .containerish .iv-info {
+        padding: 1rem 3rem; } }
+    @media screen and (min-width: 1400px) {
+      .iv-hormone .containerish .iv-info {
+        margin-bottom: 4rem; } }
+    @media screen and (min-width: 1200px) {
+      .iv-hormone .containerish .hormone-image {
+        grid-column: 2;
+        grid-row: 2; } }
+    @media screen and (min-width: 1200px) {
+      .iv-hormone .containerish .hormone-info {
+        grid-column: 1;
+        grid-row: 2;
+        padding: 1rem 3rem; } }
+    @media screen and (min-width: 1400px) {
+      .iv-hormone .containerish .hormone-info {
+        margin-bottom: 4rem; } }
 
 /* ************************************************************************** */
 /* FOOTER Sections ********************************************************** */
