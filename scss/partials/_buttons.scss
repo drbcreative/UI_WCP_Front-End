@@ -31,7 +31,7 @@
   align-items: center;
   width: 100%;
   // width: auto;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 1rem;
   margin-bottom: 0.5rem;
   // border-radius: 50px;
   @include btn-fade;
@@ -62,8 +62,8 @@
 
   &:hover {
     text-decoration: none;
-    background: $color-copy;
-    border: 1px solid $color-copy;
+    background: $color-light-accent;
+    border: 1px solid $color-light-accent;
     color: $color-white;
   }
 }

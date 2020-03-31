@@ -6,9 +6,11 @@ body {
 
 .containerish {
   width: 100%;
-  max-width: calc(100% - 60px);
   margin: 0 auto;
   overflow: hidden;
+  @include isMedium {
+    max-width: calc(100% - 60px);
+  }
 }
 
 .containerish-fluid {
@@ -20,25 +22,28 @@ body {
   width: 100%;
   max-width: 1300px;
 }
+
 .line-dark {
   background-color: $color-main;
-  opacity: .49;
+  opacity: 0.49;
   height: 1px;
   width: 85%;
   max-width: 304px;
   margin: 2rem auto;
 }
+
 .line-light {
   background-color: $color-white;
-  opacity: .49;
+  opacity: 0.49;
   height: 1px;
   width: 85%;
   max-width: 304px;
   margin: 2rem auto;
 }
+
 .line-light-quote {
   background-color: $color-white;
-  opacity: .49;
+  opacity: 0.49;
   height: 1px;
   width: 25%;
   max-width: 527px;
