@@ -1,0 +1,69 @@
+/* ************************************************************************** */
+/* Buttons ****************************************************************** */
+/* ************************************************************************** */
+@mixin btn-fade {
+  transition: all 0.3s ease-in-out;
+}
+
+.ui-btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include isLarge {
+    flex-direction: row;
+  }
+
+  .ui-btn:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+/* General Button Style */
+@mixin ui-btn {
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+  line-height: 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // width: auto;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  // border-radius: 50px;
+  @include btn-fade;
+  @include isLarge {
+    min-width: 220px;
+    max-width: 329px;
+    padding: 1.5rem 1rem;
+  }
+}
+/* Main Button Color ******************************************************** */
+.ui-btn-main {
+  @include ui-btn;
+  background-image: linear-gradient(160deg, #25AAE1, #25D3E1);
+  color: #fff;
+
+  &:hover {
+    background-image: linear-gradient(-160deg, lighten(#25AAE1, 10), lighten(#25D3E1, 10));
+    text-decoration: none;
+    color: $color-white;
+  }
+}
+
+.ui-btn-white-ol {
+  @include ui-btn;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+    background: $color-copy;
+    border: 1px solid $color-copy;
+    color: $color-white;
+  }
+}

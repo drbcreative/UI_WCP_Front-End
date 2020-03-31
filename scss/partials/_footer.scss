@@ -1,0 +1,42 @@
+/* ************************************************************************** */
+/* FOOTER Sections ********************************************************** */
+/* ************************************************************************** */
+
+/* footer 1 ***************************************************************** */
+.footer-1 {
+  background: url('../images/bottom-footer-bg@2x.jpg') center center / cover;
+  padding: 40px;
+
+  @include isXLarge {
+    padding-bottom: 8rem;
+  }
+
+  .containerish {
+    .section-info {
+      .social {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        a {
+          font-size: 3rem;
+          color: $color-main;
+          margin-left: 1.5rem;
+
+          &:hover {
+            opacity: .5;
+          }
+        }
+        i:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  p {
+    line-height: 1.2rem;
+    @include isMedium {
+      margin: 0;
+    }
+  }
+}

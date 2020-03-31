@@ -1,0 +1,33 @@
+// Color Theme Vars
+$color-main: #19A89E;
+$color-light: #EFEFEF;
+$color-light-accent: #25AAE1;
+$color-dark: #181746;
+$color-dark-accent: #1175BC;
+$color-copy: #86817D;
+$color-white: #ffffff;
+$color-black: #000000;
+
+
+/* -------------------------------------------------------------------------- */
+/* COLOR THEME */
+/* -------------------------------------------------------------------------- */
+.color-main {
+  color: $color-main;
+}
+
+.color-light {
+  color: $color-light;
+}
+
+.color-dark {
+  color: $color-dark;
+}
+
+.color-white {
+  color: $color-white;
+}
+
+.color-black {
+  color: $color-black;
+}

@@ -1,0 +1,586 @@
+/* ************************************************************************** */
+/* Main Page Sections ******************************************************* */
+/* ************************************************************************** */
+// hero
+
+.hero {
+  background: url("../images/hero-bg@2x.jpg") top center;
+  // min-height: calc(100vh - 73px);
+  min-height: calc(100vh - 149px);
+  display: flex;
+  align-items: center;
+  @include isLarge {
+    // max-height: 738px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .containerish-fluid {
+    display: grid;
+    height: inherit;
+    @include isLarge {
+      grid-template-columns: 75%;
+      align-items: center;
+      justify-content: center;
+    }
+    @include isXLarge {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    .left-col {
+      padding: 1rem;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+
+      .hero-logo {
+        width: 179px;
+        height: 134px;
+      }
+
+      h2 {
+        line-height: 2rem !important;
+        @include isXLarge {
+          &.shift-right {
+            margin-left: 8rem !important;
+          }
+        }
+      }
+      @include isXLarge {
+        margin-top: 0;
+      }
+    }
+  }
+}
+// consult
+
+.consult {
+  background-color: rgba(255,255,255,.95) !important;
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  @include isXLarge {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999999;
+    padding: 20px;
+  }
+  .containerish-fluid {
+    display: grid;
+    @include isXLarge {
+      grid-template-columns: max-content, 1fr;
+      align-items: center;
+      grid-gap: 1rem;
+    }
+    @include isRetina {
+      grid-template-columns: 100px 1fr;
+    }
+    p {
+      grid-row: 1;
+      margin: 0;
+    }
+
+    .consult-form {
+      grid-row: 1;
+      display: grid;
+      grid-gap: 1.5rem;
+      @include isMedium {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include isXLarge {
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 1rem;
+        align-items: center;
+      }
+      @include isRetina {
+        grid-template-columns: 1fr 1fr 1fr 1fr max-content;
+      }
+
+      input {
+        border: none;
+        border-bottom: 1px solid rgba($color-dark, .2);
+        background-color: transparent;
+        @include isLarge {
+          input {
+            height: 45px;
+          }
+        }
+      }
+      .ui-btn {
+        width: 100%;
+        margin: 0;
+        @include isXLarge {
+          justify-self: flex-end;
+        }
+
+      }
+    }
+  }
+}
+
+// about
+.about {
+  .containerish-fluid {
+    display: grid;
+    align-items: center;
+
+    .sec-left {}
+
+    .sec-right {
+      background-color: $color-dark;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      @include isXLarge {
+        padding: 0 3rem;
+      }
+      @include isRetina {
+        padding: 0 5rem;
+      }
+      @include isGiant {
+        padding: 0 15rem;
+      }
+
+      .ui-btn-group {
+        @include isXLarge {
+          justify-content: flex-start;
+        }
+      }
+    }
+    @include isXLarge {
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+    }
+  }
+}
+//accolades
+
+.accolades {
+  background: url("../images/accolade-bg@2x.jpg");
+  position: relative;
+  display: grid;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,.8) !important;
+    backdrop-filter: blur(20px);
+    z-index: 0;
+  }
+  @include isMedium {
+    grid-template-columns: 2fr 1fr;
+  }
+  @include isLarge {
+    grid-template-columns: 4fr 1fr;
+    padding: 40px 20px;
+  }
+
+  .col-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+    .accolade {
+      mix-blend-mode: multiply;
+      max-width: 200px;
+    }
+    @include isMedium {
+      padding: 30px 20px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 0.5rem;
+      justify-content: space-between;
+    }
+    @include isXLarge {
+      grid-gap: 1.5rem;
+    }
+    @include isRetina {
+      grid-gap: 4rem;
+    }
+  }
+
+  .col-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+
+    &::before {
+      content: '';
+      opacity: 0.5;
+      display: none;
+      @include isMedium {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 118px;
+        background-color: #707070;
+      }
+    }
+
+    &::after {
+      content: 'FEATURED IN';
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: $font-primary;
+      font-size: 14px;
+      @include isMedium {
+        top: 20px;
+      }
+      @include isLarge {
+        top: 0;
+      }
+    }
+
+    .mag-cover {
+      mix-blend-mode: multiply;
+      max-width: 130px;
+      justify-self: center;
+    }
+    @include isMedium {
+      padding: 30px 20px;
+      grid-gap: 0.5rem;
+    }
+    @include isXLarge {
+      grid-gap: 1rem;
+    }
+  }
+}
+// why
+
+.why {
+  background: url("../images/whychooseus-bg@2x.jpg") center center / cover;
+  display: flex;
+  align-items: flex-start;
+
+  @include isMedium {
+    padding: 40px 0;
+  }
+  @include isLarge {
+    height: 623px;
+    padding: 60px 0;
+  }
+  @include isXLarge {
+    height: 823px;
+    padding: 60px 0;
+
+    &.parallax-bg {
+      background-attachment: fixed;
+      transition: all .2s ease;
+    }
+  }
+
+  .containerish {
+    max-width: 911px;
+    background-color: rgba(255,255,255,.7);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+  }
+}
+// newsletter
+
+.newsletter {
+  padding: 40px;
+  @include isMedium {
+    padding: 60px 40px;
+  }
+
+  .newsletter-form {
+    display: grid;
+    grid-gap: 2rem;
+    max-width: 1366px;
+    margin: 0 auto;
+
+    input {
+      border: none;
+      border-bottom: 1px solid rgba($color-dark, .2);
+      @include isLarge {
+        input {
+          height: 45px;
+        }
+      }
+    }
+    @include isMedium {
+      grid-template-columns: 1fr 1fr 0.5fr;
+    }
+    @include isLarge {
+      margin-top: 2rem;
+    }
+  }
+}
+// surgery
+
+.surgery {
+  display: grid;
+  @include isMedium {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .surge-wrap {
+    position: relative;
+
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+}
+// spotlight testimonials
+
+.spotlight {
+  background: url("../images/testimonials-bg@2x.jpg") top center / cover;
+  padding: 40px;
+  height: 100%;
+  position: relative;
+  @include isLarge {
+    padding: 60px 40px;
+  }
+  @include isXLarge {
+    &.parallax-bg {
+      background-attachment: fixed;
+      transition: all .2s ease;
+    }
+  }
+
+  .containerish-fluid {
+    .spotlight-imgs {
+      display: grid;
+      grid-gap: 1rem;
+      max-width: 850px;
+      margin: 0 auto;
+      @include isMedium {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+      }
+    }
+
+    .spotlight-btns {
+      margin-top: 1.2rem;
+      display: grid;
+      grid-gap: 0.3rem;
+      max-width: 850px;
+      margin: 1rem auto;
+
+      a:nth-child(2) {
+        justify-self: center;
+      }
+
+      a:nth-child(3) {
+        justify-self: end;
+      }
+      @include isMedium {
+        margin-top: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+      }
+      @include isLarge {
+        margin-top: 3rem;
+      }
+    }
+    // quote
+    .quote-wrapper {
+      max-width: 1366px;
+      margin: 4rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // background-color: green;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 32%;
+        background-color: $color-white;
+        @include isMedium {
+          width: 42%;
+        }
+        @include isXLarge {
+          width: 44%;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        height: 1px;
+        width: 32%;
+        background-color: $color-white;
+        @include isMedium {
+          width: 42%;
+        }
+        @include isXLarge {
+          width: 44%;
+        }
+      }
+
+      .quote-icon {
+        width: 87px !important;
+        height: 71px !important;
+      }
+    }
+
+    .testimonials {
+      max-width: 1366px;
+      margin: 0 auto;
+      .testimonials-wrapper {
+        display: grid;
+        grid-gap: 2rem;
+        @include isLarge {
+          grid-template-columns: 1fr 1fr 1fr;
+          margin-top: 3rem;
+          margin-bottom: 3rem;
+        }
+        @include isXLarge {
+          grid-gap: 4rem;
+        }
+
+        .testimonial-copy {
+          font-size: 1rem;
+          @include isXLarge {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .ui-btn {
+        @include isLarge {
+          max-width: 270px;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+// gallery
+.gallery {
+  background: url('../images/additional-gallery-bg@2x.jpg') center center / cover;
+  height: 50vh;
+}
+
+// blog
+.blog {
+  background-color: $color-dark;
+  padding: 40px;
+
+
+  .containerish {
+    display: grid;
+    grid-template-columns: 75%;
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include isMedium {
+      grid-template-columns: 1fr 1fr;
+      padding: 60px 40px;
+    }
+
+    .col-left, .col-right {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+
+      @include isMedium {
+        grid-template-columns: max-content 1fr;
+        grid-gap: 1rem;
+        align-items: flex-start;
+      }
+      @include isXLarge {
+        grid-template-columns: max-content 1fr;
+        grid-gap: 1rem;
+        align-items: center;
+      }
+      img {
+        margin-bottom: 1rem;
+
+        @include isMedium {
+          max-width: 150px;
+          max-height: 150px;
+          margin-bottom: 0;
+        }
+      }
+      a {
+        @include isMedium {
+          // grid-row: 1;
+          grid-column: 2;
+        }
+      }
+    }
+  }
+}
+
+// location
+.location {
+  background: url('../images/fooater-map@2x.jpg') center center / cover;
+  @include isMedium {
+    padding: 40px;
+  }
+  @include isLarge {
+    padding: 60px 40px;
+  }
+  .containerish {
+    background-color: rgba(255,255,255,0.85);
+    padding: 40px;
+    display: grid;
+    grid-gap: 2rem;
+    justify-content: center;
+    max-width: 665px;
+    margin: 0;
+
+    @include isMedium {
+      box-shadow: 0 0 50px rgba(0,0,0,.16);
+      grid-template-columns: 2fr 1fr;
+      justify-content: flex-start;
+    }
+    .location-info {
+      table {
+        font-family: $font-primary;
+        font-size: 18px;
+      }
+    }
+    .big-logo {
+      max-width: 200px;
+      justify-self: center;
+
+      @include isMedium {
+        align-self: flex-end;
+      }
+    }
+  }
+}
