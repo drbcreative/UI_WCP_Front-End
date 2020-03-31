@@ -20,8 +20,20 @@ $color-black: #000000;
   color: $color-light;
 }
 
+.color-light-accent {
+  color: $color-light-accent;
+}
+
 .color-dark {
   color: $color-dark;
+}
+
+.color-dark-accent {
+  color: $color-dark-accent;
+}
+
+.color-copy {
+  color: $color-copy;
 }
 
 .color-white {

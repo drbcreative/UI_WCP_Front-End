@@ -42,7 +42,7 @@
 /* General Page Links ******************************************************* */
 .gen-page-link {
   @extend .body-copy;
-  color: $color-main;
+  color: $color-light-accent;
 
   &:hover {
     // text-decoration: none;

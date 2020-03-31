@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /* Main Page Sections ******************************************************* */
 /* ************************************************************************** */
-
 // hero
+
 .hero {
   height: 100vh;
   background: url("../../images/hero-bg@2x.jpg") center center / cover;
   background-attachment: fixed;
   // position: relative;
-
   .hero-logo-box {
     display: none;
-
     @include isXLarge {
       display: inline-flex;
       align-items: center;
@@ -56,10 +54,10 @@
     }
   }
 }
-
 // primary
+
 .primary-care {
-  background: url('../../images/priamry-care-bg@2x.jpg') center center / cover;
+  background: url("../../images/priamry-care-bg@2x.jpg") center center / cover;
   padding: 20px;
   @include isLarge {
     padding: 40px 0;
@@ -67,8 +65,9 @@
   @include isXLarge {
     padding: 60px 0;
   }
+
   .containerish {
-    background: url('../../images/priamry-care-img@2x.jpg') center center / cover;
+    background: url("../../images/priamry-care-img@2x.jpg") center center / cover;
     height: 100vh;
     max-height: 770px;
     box-shadow: 0 3px 6px rgba($color-black, .16);
@@ -91,15 +90,9 @@
       left: 0;
       height: inherit;
       width: 100%;
-      background-image: linear-gradient(0deg,
-      rgba($color-black, .8) 60%,
-      rgba($color-white, 0)
-      );
+      background-image: linear-gradient(0deg, rgba($color-black, .8) 60%, rgba($color-white, 0));
       @include isLarge {
-        background-image: linear-gradient(50deg,
-        rgba($color-black, .7) 30%,
-        rgba($color-white, 0) 70%
-        );
+        background-image: linear-gradient(50deg, rgba($color-black, .7) 30%, rgba($color-white, 0) 70%);
       }
     }
 
@@ -109,6 +102,149 @@
       @include isLarge {
         text-align: left;
       }
+    }
+  }
+}
+// about us
+
+.aboutus {
+  background: url("../../images/about-bg@2x.jpg") center center / cover;
+  padding: 40px;
+  overflow: visible;
+  @include isXLarge {
+    height: 535px;
+    padding: 0;
+  }
+
+  .containerish {
+    display: grid;
+    grid-gap: 2rem;
+    align-items: center;
+    @include isLarge {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .section-img {
+      max-width: 617px;
+      box-shadow: 0 0 50px rgba($color-black, .16);
+      @include isXLarge {
+        margin-top: 30px;
+      }
+    }
+
+    .section-info {
+      @include isXLarge {
+        padding: 2rem;
+      }
+    }
+  }
+}
+// testimonial
+
+.testimonial {
+  background: url("../../images/testimonial-bg@2x.jpg") center center / cover;
+
+  .containerish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    @include isLarge {
+      padding: 60px 0;
+    }
+    @include isXLarge {
+      padding-top: 8rem;
+    }
+    @include isRetina {
+      padding: 12rem 0 5rem;
+    }
+
+    .section-info {
+      img {
+        max-width: 92.31px;
+        max-height: 67.04px;
+      }
+      text-align: center;
+
+      h2 {
+        line-height: 60px !important;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+// icon
+.icon {
+  @include isLarge {
+    padding: 40px 0;
+  }
+  @include isXLarge {
+    padding: 60px 0;
+  }
+  .ui-btn-main {
+    margin: 0;
+  }
+  .containerish {
+    display: grid;
+    @include isLarge {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .icon-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 588px;
+      @include isGiant {
+        height: 950px;
+      }
+
+      &:nth-child(1) {
+        background: url('../../images/skin-rejuvenation-bg@2x.jpg') center center / cover;
+      }
+      &:nth-child(2) {
+        background: url('../../images/laserhairremoval-bg@2x.jpg') center center / cover;
+      }
+      &:nth-child(3) {
+        background: url('../../images/iconthreeforme-bg@2x.jpg') center center / cover;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(rgba($color-black, 0) 30%, rgba($color-black, .5));
+        z-index: 6;
+      }
+
+      .icon-info {
+        padding: 20px;
+        z-index: 10;
+
+        p {
+          line-height: 27px;
+        }
+      }
+    }
+  }
+
+  .section-footer {
+    padding: 40px;
+    text-align: center;
+    p {
+      max-width: 690px;
+      margin: 0 auto;
+    }
+    @include isXLarge {
+      padding: 60px 40px 0 40px;
     }
   }
 }
