@@ -310,7 +310,7 @@
 .appointment {
   padding: 20px;
   @include isLarge {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
   @include isXLarge {
     padding: 40px 0;
@@ -319,6 +319,9 @@
     background: url('../../images/form-bg@2x.jpg') center center / cover;
     padding: 20px;
     text-align: center;
+    @include isLarge {
+      padding: 40px;
+    }
     @include isXLarge {
       padding: 60px;
     }
