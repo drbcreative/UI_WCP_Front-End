@@ -5,6 +5,7 @@ $color-light-accent: #25AAE1;
 $color-dark: #181746;
 $color-dark-accent: #1175BC;
 $color-copy: #86817D;
+$color-header: #5A5A5A;
 $color-white: #ffffff;
 $color-black: #000000;
 
@@ -34,6 +35,9 @@ $color-black: #000000;
 
 .color-copy {
   color: $color-copy;
+}
+.color-header {
+  color: $color-header;
 }
 
 .color-white {

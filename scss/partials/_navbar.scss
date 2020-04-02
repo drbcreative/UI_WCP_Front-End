@@ -55,7 +55,7 @@
     .nav-link {
       font-size: 14px;
       font-weight: 700;
-      color: $color-dark;
+      color: #5A5A5A;
 
       &:hover {
         color: $color-light-accent !important;
@@ -67,11 +67,11 @@
       @include isXLarge {
         display: block;
         &::before {
-          content: '•';
+          content: url('../images/nav-dot.png');
           position: absolute;
           top: 50%;
-          transform: translateY(-50%);
-          font-size: 2rem;
+          transform: translateY(-60%);
+          // font-size: 4rem;
           color: $color-light-accent;
         }
       }
